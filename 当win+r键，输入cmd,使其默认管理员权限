@@ -1,0 +1,8 @@
+很多人喜欢win+r打开cmd,但是有时候并不是以管理员权限打开的，这时候，我们需要
+1.打开注册表：win+r运行，输入regedit,回车
+2.然后找到：
+[HKEY_CURRENT_USER\Software\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Layers]
+在里面右键增加字符串：
+名称写：C:\windows\system32\cmd.exe
+数据写：RUNASADMIN
+这样就ok了
